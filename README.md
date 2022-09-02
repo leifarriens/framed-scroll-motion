@@ -11,13 +11,13 @@ Wrapper for [framer-motions](https://github.com/framer/motion/tree/main/packages
 With npm:
 
 ```sh
-npm i framer-motion framed-scroll-motion
+npm i framed-scroll-motion
 ```
 
 With yarn:
 
 ```sh
-yarn add framer-motion framed-scroll-motion
+yarn add framed-scroll-motion
 ```
 
 ## Usage/Examples
