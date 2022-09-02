@@ -1,6 +1,8 @@
 # framed-scroll-motion
 
-Wrapper for [framer-motions](https://github.com/framer/motion/tree/main/packages/framer-motion) `useViewportScroll` hook to animate an element according to its ref containers position in the viewport.
+Wrapper for [framer-motions](https://github.com/framer/motion/tree/main/packages/framer-motion) `useViewportScroll` hook to animate an element according to its refs container position in the viewport.
+
+Originally inspired by [coleturner](https://gist.github.com/coleturner)'s [gist](https://gist.github.com/coleturner/34396fb826c12fbd88d6591173d178c2).
 
 ## Demo
 
