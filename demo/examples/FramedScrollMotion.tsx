@@ -1,17 +1,13 @@
 import { useFramedScrollMotion } from '../../src';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 export function FramedScrollMotion() {
-  const [ref, filter] = useFramedScrollMotion(
-    [0.25, 1],
-    ['hue-rotate(0deg)', 'hue-rotate(-180deg)']
-  );
+  const [ref, rotate] = useFramedScrollMotion([0, 1], [0, 180]);
 
   return (
-    <section style={{ backgroundColor: 'brown' }}>
-      <motion.div ref={ref} className="element" style={{ filter }}>
-        Ref
-      </motion.div>
-    </section>
+    <motion.div ref={ref} className="element" style={{ rotate }}>
+      Rotate
+    </motion.div>
   );
 }

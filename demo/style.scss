@@ -1,3 +1,15 @@
+:root {
+  color-scheme: dark;
+
+  --border-radius: 10px;
+  --padding: 12px 26px;
+  --background: #1a1a1a;
+}
+
+html {
+  font-size: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,46 +17,90 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a1a;
+  background-color: var(--background);
   color: #fff;
+  font-size: 1.85rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    font-size: 16px;
+    background-color: #2d2d2d;
+    padding:  var(--padding);
+    border-radius: var(--border-radius);
 }
 
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 main {
   flex: 1;
 }
 
-header, footer {
-  height: 100vh;
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-section {
-  min-height: 150vh;
-  display: grid;
-  place-items: center;
-  background-color: azure;
-  // margin: 80px 0;
-  color: #000;
+img {
+  width: 100%;
+  height: auto;
+}
+
+header, footer, section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  * + * {
+    margin-top: 1em;
+  }
+
+  > * {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(145deg, #72f, #c1b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .element {
-  min-height: 20vw;
-  width: 20vw;
+  z-index: 10;
+  min-height: 35vh;
+  width: 35vh;
+  max-width: 50vw;
+  padding: 40px;
+  background-color: #353b42;
+  color: #fff;
+  border-radius: 32px;
   display: grid;
   place-items: center;
-  background-color: darkblue;
-  color: #fff;
-  border-radius: 24px;
+  background-image: linear-gradient(to right top, #353b42, #2c5768, #007681, #009687, #2db378);
 }
 
-
+.square {
+  --size: 20vh;
+  width: var(--size);
+  height: var(--size);
+  // padding: 20px;
+  background-color: #353b42;
+  // color: #fff;
+  border-radius: 32px;
+  background-image: linear-gradient(to right top, #353b42, #2c5768, #007681, #009687, #2db378);
+}

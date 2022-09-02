@@ -1,25 +1,44 @@
-import { ReziseProvider } from '../src';
-import Demo from './Demo';
+import { FrameProvider } from '../src';
+import React from 'react';
+import Header from './components/Header';
+// import Demo from './Demo';
 import {
-  RefScrollProgress,
   RefViewportScroll,
   FramedScrollMotion,
+  ContainerRef,
 } from './examples';
 
 function App() {
   return (
-    <ReziseProvider>
+    <FrameProvider>
       <div className="container">
-        <header>Hero</header>
+        <Header />
+
         <main>
-          <Demo />
-          <RefScrollProgress />
-          <RefViewportScroll />
-          <FramedScrollMotion />
+          <section>
+            <FramedScrollMotion />
+          </section>
+
+          <section>
+            <RefViewportScroll />
+          </section>
+
+          <section>
+            <ContainerRef />
+          </section>
+          {/* <Demo /> */}
         </main>
-        <footer>footer 2</footer>
+
+        <footer>
+          <a
+            href="https://github.com/leifarriens/framed-scroll-motion"
+            target="_blank"
+          >
+            github
+          </a>
+        </footer>
       </div>
-    </ReziseProvider>
+    </FrameProvider>
   );
 }
 

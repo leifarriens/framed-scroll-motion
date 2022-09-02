@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import typescript2 from 'rollup-plugin-typescript2';
 import typescript from '@rollup/plugin-typescript';
 
 export default defineConfig({
-  root: 'demo',
   plugins: [react(), { ...typescript(), apply: 'build' }],
   build: {
     lib: {

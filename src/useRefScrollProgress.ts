@@ -1,5 +1,6 @@
 import { useState, useRef, useLayoutEffect } from 'react';
 
+// deprecated
 export function useRefScrollProgress(watch?: unknown) {
   const ref = useRef<HTMLDivElement>(null);
   const [start, setStart] = useState(0);

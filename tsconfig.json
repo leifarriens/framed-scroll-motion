@@ -19,6 +19,6 @@
     "outDir": "dist"
   },
   "include": ["src", "demo"],
-  "exclude": ["dist", "demo"],
+  "exclude": ["dist", "demo"], // TODO: is this causing UMD error?
   "references": [{ "path": "./tsconfig.node.json" }]
 }

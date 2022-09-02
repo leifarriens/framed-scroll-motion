@@ -16,9 +16,9 @@ const initialState: ContextProps = {
   height: null,
 };
 
-const ReziseContext = createContext<ContextProps>(initialState);
+const FrameContext = createContext<ContextProps>(initialState);
 
-export const ReziseProvider = ({
+export const FrameProvider = ({
   children,
 }: {
   children: ReactNode | ReactNode[];
@@ -37,11 +37,9 @@ export const ReziseProvider = ({
     };
   }, []);
 
-  return (
-    <ReziseContext.Provider value={size}>{children}</ReziseContext.Provider>
-  );
+  return <FrameContext.Provider value={size}>{children}</FrameContext.Provider>;
 };
 
-export function useSize() {
-  return useContext(ReziseContext);
+export function useWindowSize() {
+  return useContext(FrameContext);
 }
