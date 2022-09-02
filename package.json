@@ -18,7 +18,7 @@
     "dev": "vite --port 5050 --config vite.config.demo.js",
     "build": "tsc && vite build",
     "lint": "eslint . --ext .ts,.tsx",
-    "build:demo": "vite build --config vite.config.demo.js",
+    "build:demo": "tsc && vite build && vite build --config vite.config.demo.js",
     "preview": "vite preview --config vite.config.demo.js"
   },
   "dependencies": {
