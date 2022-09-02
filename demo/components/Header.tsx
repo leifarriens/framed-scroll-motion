@@ -14,7 +14,7 @@ export default function Header() {
       <div ref={ref} style={{ textAlign: 'center' }}>
         <motion.h1 style={{ filter }}>framed-scroll-motion</motion.h1>
         <pre>
-          <code>npm install framer-motion framed-scroll-motion</code>
+          <code>npm install framed-scroll-motion</code>
         </pre>
         <div>
           <a

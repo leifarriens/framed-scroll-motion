@@ -22,8 +22,12 @@ export function ContainerRef() {
         alignItems: 'center',
       }}
     >
-      {Array.from({ length: 5 }).map(() => (
-        <motion.div className="element" style={{ scale, rotate, filter }} />
+      {Array.from({ length: 5 }).map((_, i) => (
+        <motion.div
+          key={i}
+          className="element"
+          style={{ scale, rotate, filter }}
+        />
       ))}
     </div>
   );
